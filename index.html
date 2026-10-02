@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BGeito | Biologia e Geologia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #faf6ed;
+            color: #17392d;
+        }
+
+        /* MENU */
+
+        header {
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #faf6ed;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #17392d;
+            margin-left: 30px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #8fa577;
+        }
+
+        /* PARTE PRINCIPAL */
+
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero span {
+            background-color: #dfe8d3;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            max-width: 850px;
+            line-height: 1.05;
+        }
+
+        .hero h1 strong {
+            color: #8da374;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 620px;
+            margin: 25px 0 35px;
+            color: #53665b;
+            line-height: 1.6;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #17392d;
+            color: white;
+            text-decoration: none;
+            padding: 16px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .botao:hover {
+            transform: translateY(-3px);
+            background-color: #294f3e;
+        }
+
+        /* CARTÕES */
+
+        .materias {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .materias h2 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .materias > p {
+            color: #68776e;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 310px;
+            padding: 35px;
+            background-color: white;
+            border-radius: 25px;
+            text-align: left;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .icone {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #68776e;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 30px;
+            text-align: center;
+            background-color: #17392d;
+            color: white;
+        }
+
+        /* TELEMÓVEL */
+
+        @media (max-width: 700px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            header {
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<header>
+
+    <div class="logo">
+        BGeito
+    </div>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#materias">Matéria</a>
+        <a href="#">Exercícios</a>
+        <a href="#">Sobre</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <span>🌿 Preparação para o Exame Nacional</span>
+
+    <h1>
+        Dá um <strong>BGeito</strong><br>
+        à tua nota.
+    </h1>
+
+    <p>
+        Biologia e Geologia explicadas de forma simples.
+        Aprende a matéria, pratica exercícios e prepara-te
+        para o Exame Nacional.
+    </p>
+
+    <a href="#materias" class="botao">
+        Começar a estudar →
+    </a>
+
+</section>
+
+
+<section class="materias" id="materias">
+
+    <h2>O que queres estudar?</h2>
+
+    <p>Escolhe uma área e começa por onde precisares.</p>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icone">🧬</div>
+
+            <h3>Biologia</h3>
+
+            <p>
+                Citologia, genética, evolução,
+                ecologia e muito mais.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">🌍</div>
+
+            <h3>Geologia</h3>
+
+            <p>
+                Tectónica, vulcanismo, sismos,
+                rochas e história da Terra.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icone">📝</div>
+
+            <h3>Modo Exame</h3>
+
+            <p>
+                Treina perguntas de exame
+                e testa os teus conhecimentos.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    BGeito 🌿 — Dá um BGeito à tua nota.
+
+</footer>
+
+
+</body>
+</html>
