@@ -24,44 +24,35 @@
             color: #17392d;
         }
 
-
-        /* =========================
-           MENU
-        ========================= */
+        /* MENU */
 
         header {
             padding: 22px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #faf6ed;
         }
 
         .logo {
             font-size: 30px;
             font-weight: bold;
-            color: #17392d;
         }
 
         .voltar {
             text-decoration: none;
             color: #17392d;
             font-weight: bold;
-            transition: 0.2s;
         }
 
         .voltar:hover {
             color: #8fa577;
         }
 
-
-        /* =========================
-           INTRODUÇÃO
-        ========================= */
+        /* INTRODUÇÃO */
 
         .intro {
             text-align: center;
-            padding: 70px 20px 50px;
+            padding: 70px 20px 55px;
         }
 
         .etiqueta {
@@ -84,83 +75,128 @@
             font-size: 18px;
         }
 
+        /* CONTEÚDO */
 
-        /* =========================
-           CARTÕES DOS ANOS
-        ========================= */
-
-        .anos {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 30px;
-            flex-wrap: wrap;
-            padding: 20px 8% 90px;
+        .conteudo {
+            max-width: 950px;
+            margin: auto;
+            padding: 10px 25px 90px;
         }
+
+        /* ANO */
 
         .ano {
-            background: white;
-            width: 430px;
-            padding: 35px;
-            border-radius: 25px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            margin-bottom: 65px;
         }
 
-        .ano-numero {
-            font-size: 13px;
-            color: #839471;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .ano h2 {
-            font-size: 30px;
+        .ano-topo {
             margin-bottom: 25px;
         }
 
+        .ano-numero {
+            color: #82916f;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
 
-        /* =========================
-           TÓPICOS
-        ========================= */
+        .ano h2 {
+            font-size: 32px;
+        }
 
-        .topico {
+        /* AULA */
+
+        .aula {
+            display: block;
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 20px;
+
             text-decoration: none;
-color: #17392d;
-            padding: 17px 18px;
-            background: #f4f6ef;
-            border-radius: 15px;
-            margin-bottom: 12px;
+            color: #17392d;
 
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+        .aula:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.09);
+        }
+
+        .numero-aula {
+            font-size: 12px;
+            font-weight: bold;
+            color: #82916f;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .aula h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .aula p {
+            color: #65746b;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        /* CONTEÚDOS DA AULA */
+
+        .inclui {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 23px;
+        }
+
+        .item {
+            background: #f0f4ea;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* BOTÃO */
+
+        .entrar {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            cursor: pointer;
+            border-top: 1px solid #e8ece4;
+            padding-top: 20px;
 
-            transition:
-                transform 0.2s,
-                background 0.2s;
-        }
-
-        .topico:hover {
-            background: #dfe8d3;
-            transform: translateX(5px);
-        }
-
-        .topico span:first-child {
             font-weight: bold;
         }
 
         .seta {
+            font-size: 21px;
             color: #82916f;
-            font-size: 20px;
         }
 
+        /* EM BREVE */
 
-        /* =========================
-           RODAPÉ
-        ========================= */
+        .breve {
+            background: #f0f4ea;
+            border-radius: 22px;
+            padding: 28px;
+            color: #65746b;
+        }
+
+        .breve strong {
+            color: #17392d;
+        }
+
+        /* RODAPÉ */
 
         footer {
             background: #17392d;
@@ -169,12 +205,9 @@ color: #17392d;
             padding: 30px;
         }
 
+        /* TELEMÓVEL */
 
-        /* =========================
-           TELEMÓVEL
-        ========================= */
-
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
 
             header {
                 padding: 20px 6%;
@@ -188,18 +221,12 @@ color: #17392d;
                 font-size: 42px;
             }
 
-            .intro p {
-                font-size: 16px;
+            .aula {
+                padding: 24px;
             }
 
-            .anos {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            .ano {
-                width: 100%;
-                padding: 25px;
+            .aula h3 {
+                font-size: 22px;
             }
 
         }
@@ -211,56 +238,42 @@ color: #17392d;
 <body>
 
 
-    <!-- =========================
-         MENU
-    ========================== -->
+<header>
 
-    <header>
+    <a href="index.html" class="voltar">
+        ← Início
+    </a>
 
-        <a href="index.html" class="voltar">
-            ← Voltar
-        </a>
+    <div class="logo">
+        BGeito
+    </div>
 
-        <div class="logo">
-            BGeito
-        </div>
-
-    </header>
+</header>
 
 
+<section class="intro">
 
-    <!-- =========================
-         INTRODUÇÃO
-    ========================== -->
+    <div class="etiqueta">
+        🧬 BIOLOGIA
+    </div>
 
-    <section class="intro">
+    <h1>Biologia</h1>
 
-        <div class="etiqueta">
-            🧬 BIOLOGIA
-        </div>
+    <p>
+        Revê as aulas, consulta os resumos e pratica com as fichas.
+    </p>
 
-        <h1>Biologia</h1>
-
-        <p>
-            Escolhe o teu ano e começa a estudar.
-        </p>
-
-    </section>
+</section>
 
 
-
-    <!-- =========================
-         ANOS
-    ========================== -->
-
-    <section class="anos">
+<main class="conteudo">
 
 
-        <!-- =====================
-             10.º ANO
-        ====================== -->
+    <!-- 10.º ANO -->
 
-        <div class="ano">
+    <section class="ano">
+
+        <div class="ano-topo">
 
             <div class="ano-numero">
                 BIOLOGIA
@@ -268,69 +281,57 @@ color: #17392d;
 
             <h2>10.º ano 🌱</h2>
 
-
-            <a href="ecologia.html" class="topico">
-    <span>1. Ecologia</span>
-    <span class="seta">→</span>
-</a>
-
-
-            <div class="topico">
-                <span>2. Célula</span>
-                <span class="seta">→</span>
-            </div>
-
-
-            <div class="topico">
-                <span>3. Biomoléculas</span>
-                <span class="seta">→</span>
-            </div>
-
-
-            <div class="topico">
-                <span>4. Heterotrofia</span>
-                <span class="seta">→</span>
-            </div>
-
-
-            <div class="topico">
-                <span>5. Autotrofia</span>
-                <span class="seta">→</span>
-            </div>
-
-
-            <div class="topico">
-                <span>6. Transporte nas Plantas</span>
-                <span class="seta">→</span>
-            </div>
-
-
-            <div class="topico">
-                <span>7. Transporte nos Animais</span>
-                <span class="seta">→</span>
-            </div>
-
-
-            <div class="topico">
-                <span>8. Utilização de Energia</span>
-                <span class="seta">→</span>
-            </div>
-
-
-            <div class="topico">
-                <span>9. Trocas Gasosas</span>
-                <span class="seta">→</span>
-            </div>
-
         </div>
 
 
+        <!-- AULA 1 -->
 
-        <!-- =====================
-             11.º ANO
-        ====================== -->
+        <a href="bio-aula1.html" class="aula">
 
-        <div class="ano">
+            <div class="numero-aula">
+                AULA 1
+            </div>
+
+            <h3>
+                🌱 Ecologia + Célula
+            </h3>
+
+            <p>
+                Material da aula sobre Ecologia e organização celular.
+            </p>
+
+            <div class="inclui">
+
+                <span class="item">
+                    📖 Resumo
+                </span>
+
+                <span class="item">
+                    ✏️ Ficha de exercícios
+                </span>
+
+            </div>
+
+            <div class="entrar">
+
+                <span>Ver aula</span>
+
+                <span class="seta">
+                    →
+                </span>
+
+            </div>
+
+        </a>
+
+    </section>
+
+
+    <!-- 11.º ANO -->
+
+    <section class="ano">
+
+        <div class="ano-topo">
 
             <div class="ano-numero">
                 BIOLOGIA
@@ -338,44 +339,28 @@ color: #17392d;
 
             <h2>11.º ano 🧬</h2>
 
-
-            <div class="topico">
-                <span>10. Renovação Celular</span>
-                <span class="seta">→</span>
-            </div>
-
-
-            <div class="topico">
-                <span>11. Reprodução</span>
-                <span class="seta">→</span>
-            </div>
-
-
-            <div class="topico">
-                <span>12. Evolução</span>
-                <span class="seta">→</span>
-            </div>
-
-
-            <div class="topico">
-                <span>13. Sistemática</span>
-                <span class="seta">→</span>
-            </div>
-
         </div>
 
+        <div class="breve">
+
+            <strong>Novas aulas em breve.</strong>
+
+            <br><br>
+
+            Os resumos e fichas vão sendo adicionados
+            à medida que avançamos na matéria.
+
+        </div>
 
     </section>
 
 
+</main>
 
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
 
-    <footer>
-        BGeito 🌿 — Dá um BGeito à tua nota.
-    </footer>
+<footer>
+    BGeito 🌿 — Dá um BGeito à tua nota.
+</footer>
 
 
 </body>
