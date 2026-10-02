@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Biologia | BGeito</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -18,44 +24,54 @@
             color: #17392d;
         }
 
-        /* MENU */
+
+        /* =========================
+           MENU
+        ========================= */
 
         header {
             padding: 22px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: #faf6ed;
         }
 
         .logo {
             font-size: 30px;
             font-weight: bold;
+            color: #17392d;
         }
 
         .voltar {
             text-decoration: none;
             color: #17392d;
             font-weight: bold;
+            transition: 0.2s;
         }
 
         .voltar:hover {
             color: #8fa577;
         }
 
-        /* INTRODUÇÃO */
+
+        /* =========================
+           INTRODUÇÃO
+        ========================= */
 
         .intro {
             text-align: center;
-            padding: 70px 20px 45px;
+            padding: 70px 20px 50px;
         }
 
         .etiqueta {
             display: inline-block;
             background: #dfe8d3;
-            padding: 8px 18px;
+            padding: 9px 18px;
             border-radius: 30px;
             margin-bottom: 20px;
             font-size: 14px;
+            font-weight: bold;
         }
 
         .intro h1 {
@@ -68,14 +84,18 @@
             font-size: 18px;
         }
 
-        /* ANOS */
+
+        /* =========================
+           CARTÕES DOS ANOS
+        ========================= */
 
         .anos {
             display: flex;
             justify-content: center;
+            align-items: flex-start;
             gap: 30px;
             flex-wrap: wrap;
-            padding: 20px 8% 80px;
+            padding: 20px 8% 90px;
         }
 
         .ano {
@@ -87,9 +107,10 @@
         }
 
         .ano-numero {
-            font-size: 14px;
+            font-size: 13px;
             color: #839471;
             font-weight: bold;
+            letter-spacing: 1px;
             margin-bottom: 8px;
         }
 
@@ -98,18 +119,26 @@
             margin-bottom: 25px;
         }
 
-        /* TÓPICOS */
+
+        /* =========================
+           TÓPICOS
+        ========================= */
 
         .topico {
             padding: 17px 18px;
             background: #f4f6ef;
             border-radius: 15px;
             margin-bottom: 12px;
-            cursor: pointer;
-            transition: 0.2s;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.2s,
+                background 0.2s;
         }
 
         .topico:hover {
@@ -117,13 +146,19 @@
             transform: translateX(5px);
         }
 
-        .topico span {
+        .topico span:first-child {
             font-weight: bold;
         }
 
         .seta {
             color: #82916f;
+            font-size: 20px;
         }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
 
         footer {
             background: #17392d;
@@ -132,122 +167,214 @@
             padding: 30px;
         }
 
+
+        /* =========================
+           TELEMÓVEL
+        ========================= */
+
         @media (max-width: 600px) {
+
+            header {
+                padding: 20px 6%;
+            }
+
+            .intro {
+                padding-top: 50px;
+            }
+
             .intro h1 {
                 font-size: 42px;
             }
 
+            .intro p {
+                font-size: 16px;
+            }
+
+            .anos {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
             .ano {
                 width: 100%;
+                padding: 25px;
             }
+
         }
 
     </style>
 </head>
 
+
 <body>
 
-<header>
 
-    <a href="index.html" class="voltar">
-        ← Voltar
-    </a>
+    <!-- =========================
+         MENU
+    ========================== -->
 
-    <div class="logo">
-        BGeito
-    </div>
+    <header>
 
-</header>
+        <a href="index.html" class="voltar">
+            ← Voltar
+        </a>
 
-
-<section class="intro">
-
-    <div class="etiqueta">
-        🧬 BIOLOGIA
-    </div>
-
-    <h1>Biologia</h1>
-
-    <p>
-        Escolhe o teu ano e começa a estudar.
-    </p>
-
-</section>
-
-
-<section class="anos">
-
-    <!-- 10.º ANO -->
-
-    <div class="ano">
-
-        <div class="ano-numero">
-            BIOLOGIA
+        <div class="logo">
+            BGeito
         </div>
 
-        <h2>10.º ano 🌱</h2>
+    </header>
 
-        <div class="topico">
-            <span>Biosfera</span>
-            <span class="seta">→</span>
+
+
+    <!-- =========================
+         INTRODUÇÃO
+    ========================== -->
+
+    <section class="intro">
+
+        <div class="etiqueta">
+            🧬 BIOLOGIA
         </div>
 
-        <div class="topico">
-            <span>Obtenção de matéria</span>
-            <span class="seta">→</span>
+        <h1>Biologia</h1>
+
+        <p>
+            Escolhe o teu ano e começa a estudar.
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         ANOS
+    ========================== -->
+
+    <section class="anos">
+
+
+        <!-- =====================
+             10.º ANO
+        ====================== -->
+
+        <div class="ano">
+
+            <div class="ano-numero">
+                BIOLOGIA
+            </div>
+
+            <h2>10.º ano 🌱</h2>
+
+
+            <div class="topico">
+                <span>1. Ecologia</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>2. Célula</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>3. Biomoléculas</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>4. Heterotrofia</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>5. Autotrofia</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>6. Transporte nas Plantas</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>7. Transporte nos Animais</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>8. Utilização de Energia</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>9. Trocas Gasosas</span>
+                <span class="seta">→</span>
+            </div>
+
         </div>
 
-        <div class="topico">
-            <span>Distribuição de matéria</span>
-            <span class="seta">→</span>
+
+
+        <!-- =====================
+             11.º ANO
+        ====================== -->
+
+        <div class="ano">
+
+            <div class="ano-numero">
+                BIOLOGIA
+            </div>
+
+            <h2>11.º ano 🧬</h2>
+
+
+            <div class="topico">
+                <span>10. Renovação Celular</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>11. Reprodução</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>12. Evolução</span>
+                <span class="seta">→</span>
+            </div>
+
+
+            <div class="topico">
+                <span>13. Sistemática</span>
+                <span class="seta">→</span>
+            </div>
+
         </div>
 
-        <div class="topico">
-            <span>Transformação e utilização de energia</span>
-            <span class="seta">→</span>
-        </div>
 
-    </div>
+    </section>
 
 
-    <!-- 11.º ANO -->
 
-    <div class="ano">
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
 
-        <div class="ano-numero">
-            BIOLOGIA
-        </div>
+    <footer>
+        BGeito 🌿 — Dá um BGeito à tua nota.
+    </footer>
 
-        <h2>11.º ano 🧬</h2>
-
-        <div class="topico">
-            <span>Crescimento e renovação celular</span>
-            <span class="seta">→</span>
-        </div>
-
-        <div class="topico">
-            <span>Reprodução</span>
-            <span class="seta">→</span>
-        </div>
-
-        <div class="topico">
-            <span>Evolução biológica</span>
-            <span class="seta">→</span>
-        </div>
-
-        <div class="topico">
-            <span>Sistemática dos seres vivos</span>
-            <span class="seta">→</span>
-        </div>
-
-    </div>
-
-</section>
-
-
-<footer>
-    BGeito 🌿 — Dá um BGeito à tua nota.
-</footer>
 
 </body>
 </html>
