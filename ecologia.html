@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ecologia | BGeito</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #faf6ed;
+            color: #17392d;
+        }
+
+        /* MENU */
+
+        header {
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .voltar {
+            text-decoration: none;
+            color: #17392d;
+            font-weight: bold;
+        }
+
+        .voltar:hover {
+            color: #8fa577;
+        }
+
+        /* INTRODUÇÃO */
+
+        .intro {
+            text-align: center;
+            padding: 65px 20px 55px;
+        }
+
+        .etiqueta {
+            display: inline-block;
+            background: #dfe8d3;
+            padding: 9px 18px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .intro h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #65746b;
+            font-size: 18px;
+        }
+
+        /* CONTEÚDO */
+
+        .conteudo {
+            max-width: 950px;
+            margin: auto;
+            padding: 10px 25px 90px;
+        }
+
+        .secao {
+            margin-bottom: 55px;
+        }
+
+        .secao h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .descricao {
+            color: #65746b;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        /* CARTÕES */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.05);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .icone {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #65746b;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        .botao {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 17px;
+            background: #17392d;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .botao:hover {
+            background: #8fa577;
+        }
+
+        /* FICHA */
+
+        .ficha {
+            background: #eef3e7;
+            border-radius: 20px;
+            padding: 28px;
+        }
+
+        .temas {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+        }
+
+        .tema {
+            background: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #17392d;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* TELEMÓVEL */
+
+        @media (max-width: 650px) {
+
+            .intro h1 {
+                font-size: 42px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <a href="biologia.html" class="voltar">
+        ← Biologia
+    </a>
+
+    <div class="logo">
+        BGeito
+    </div>
+
+</header>
+
+
+<section class="intro">
+
+    <div class="etiqueta">
+        🌱 BIOLOGIA · 10.º ANO
+    </div>
+
+    <h1>Ecologia</h1>
+
+    <p>
+        Resumos e exercícios para dominares este tema.
+    </p>
+
+</section>
+
+
+<main class="conteudo">
+
+
+    <!-- RESUMOS -->
+
+    <section class="secao">
+
+        <h2>📖 Resumos</h2>
+
+        <p class="descricao">
+            Revê a matéria de Ecologia de forma simples e organizada.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icone">🌍</div>
+
+                <h3>Ecossistemas</h3>
+
+                <p>
+                    Biosfera, ecossistema, comunidade,
+                    população, espécie e fatores bióticos
+                    e abióticos.
+                </p>
+
+                <a href="#" class="botao">
+                    Ver resumo →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone">🌿</div>
+
+                <h3>Relações tróficas</h3>
+
+                <p>
+                    Produtores, consumidores, decompositores,
+                    cadeias e teias alimentares.
+                </p>
+
+                <a href="#" class="botao">
+                    Ver resumo →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone">♻️</div>
+
+                <h3>Fluxo de energia e matéria</h3>
+
+                <p>
+                    Transferência de energia nos ecossistemas
+                    e ciclo da matéria.
+                </p>
+
+                <a href="#" class="botao">
+                    Ver resumo →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone">🦋</div>
+
+                <h3>Dinâmica dos ecossistemas</h3>
+
+                <p>
+                    Alterações nos ecossistemas, biodiversidade
+                    e equilíbrio ecológico.
+                </p>
+
+                <a href="#" class="botao">
+                    Ver resumo →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXERCÍCIOS -->
+
+    <section class="secao">
+
+        <h2>✏️ Exercícios</h2>
+
+        <p class="descricao">
+            Testa os teus conhecimentos com fichas que podem
+            incluir vários temas.
+        </p>
+
+        <div class="ficha">
+
+            <h3>Ficha de exercícios</h3>
+
+            <p class="descricao">
+                Exercícios de consolidação e preparação para o exame.
+            </p>
+
+            <div class="temas">
+
+                <span class="tema">
+                    🌱 Ecologia
+                </span>
+
+                <span class="tema">
+                    + outro tema
+                </span>
+
+            </div>
+
+            <a href="#" class="botao">
+                Fazer ficha →
+            </a>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+    BGeito 🌿 — Dá um BGeito à tua nota.
+</footer>
+
+</body>
+</html>
