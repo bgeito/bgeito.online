@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ecologia + Célula | BGeito</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #faf6ed;
+            color: #17392d;
+        }
+
+        /* MENU */
+
+        header {
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .voltar {
+            text-decoration: none;
+            color: #17392d;
+            font-weight: bold;
+        }
+
+        .voltar:hover {
+            color: #8fa577;
+        }
+
+        /* INTRODUÇÃO */
+
+        .intro {
+            text-align: center;
+            padding: 65px 20px 60px;
+        }
+
+        .etiqueta {
+            display: inline-block;
+            background: #dfe8d3;
+            color: #17392d;
+            padding: 9px 18px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .intro h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #65746b;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* CONTEÚDO */
+
+        .conteudo {
+            max-width: 950px;
+            margin: auto;
+            padding: 0 25px 90px;
+        }
+
+        .secao {
+            margin-bottom: 60px;
+        }
+
+        .secao-topo {
+            margin-bottom: 25px;
+        }
+
+        .secao h2 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .descricao {
+            color: #65746b;
+            line-height: 1.6;
+        }
+
+        /* GRELHA */
+
+        .materiais {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* CARTÃO */
+
+        .material {
+            background: white;
+            border-radius: 22px;
+            padding: 28px;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+
+            display: flex;
+            flex-direction: column;
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+        .material:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.09);
+        }
+
+        .icone {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #eef3e7;
+            border-radius: 15px;
+
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .material h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .material p {
+            color: #65746b;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        /* BOTÕES */
+
+        .botao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            text-decoration: none;
+
+            background: #17392d;
+            color: white;
+
+            padding: 13px 16px;
+            border-radius: 12px;
+
+            font-weight: bold;
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+        .botao:hover {
+            background: #8fa577;
+        }
+
+        /* AVISO */
+
+        .nota {
+            background: #eef3e7;
+            border-radius: 18px;
+            padding: 20px 22px;
+            margin-top: 25px;
+
+            color: #526159;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #17392d;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* TELEMÓVEL */
+
+        @media (max-width: 650px) {
+
+            header {
+                padding: 20px 6%;
+            }
+
+            .intro {
+                padding-top: 45px;
+            }
+
+            .intro h1 {
+                font-size: 39px;
+            }
+
+            .intro p {
+                font-size: 16px;
+            }
+
+            .materiais {
+                grid-template-columns: 1fr;
+            }
+
+            .material {
+                padding: 24px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<header>
+
+    <a href="biologia.html" class="voltar">
+        ← Biologia
+    </a>
+
+    <div class="logo">
+        BGeito
+    </div>
+
+</header>
+
+
+<section class="intro">
+
+    <div class="etiqueta">
+        BIOLOGIA · 10.º ANO · AULA 1
+    </div>
+
+    <h1>
+        🌱 Ecologia + Célula
+    </h1>
+
+    <p>
+        Consulta os materiais da aula e pratica a matéria.
+    </p>
+
+</section>
+
+
+<main class="conteudo">
+
+
+    <!-- RESUMOS -->
+
+    <section class="secao">
+
+        <div class="secao-topo">
+
+            <h2>
+                📖 Resumos
+            </h2>
+
+            <p class="descricao">
+                Escolhe a versão do resumo que pretendes consultar.
+            </p>
+
+        </div>
+
+
+        <div class="materiais">
+
+
+            <!-- COM APONTAMENTOS -->
+
+            <div class="material">
+
+                <div class="icone">
+                    📝
+                </div>
+
+                <h3>
+                    Com apontamentos
+                </h3>
+
+                <p>
+                    Consulta o resumo completo com os apontamentos
+                    e explicações da matéria.
+                </p>
+
+                <a href="#" class="botao">
+                    <span>Abrir resumo</span>
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <!-- SEM APONTAMENTOS -->
+
+            <div class="material">
+
+                <div class="icone">
+                    📄
+                </div>
+
+                <h3>
+                    Sem apontamentos
+                </h3>
+
+                <p>
+                    Consulta a versão limpa do resumo para acompanhares
+                    a matéria e adicionares os teus próprios apontamentos.
+                </p>
+
+                <a href="#" class="botao">
+                    <span>Abrir resumo</span>
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FICHA -->
+
+    <section class="secao">
+
+        <div class="secao-topo">
+
+            <h2>
+                ✏️ Ficha de exercícios
+            </h2>
+
+            <p class="descricao">
+                Resolve primeiro a ficha e consulta a correção depois.
+            </p>
+
+        </div>
+
+
+        <div class="materiais">
+
+
+            <!-- ENUNCIADO -->
+
+            <div class="material">
+
+                <div class="icone">
+                    ✏️
+                </div>
+
+                <h3>
+                    Enunciado
+                </h3>
+
+                <p>
+                    Resolve os exercícios para testares os teus
+                    conhecimentos sobre Ecologia e Célula.
+                </p>
+
+                <a href="#" class="botao">
+                    <span>Abrir ficha</span>
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <!-- CORREÇÃO -->
+
+            <div class="material">
+
+                <div class="icone">
+                    ✓
+                </div>
+
+                <h3>
+                    Correção
+                </h3>
+
+                <p>
+                    Depois de resolveres a ficha, consulta a correção
+                    e verifica as tuas respostas.
+                </p>
+
+                <a href="#" class="botao">
+                    <span>Ver correção</span>
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="nota">
+            💡 <strong>Dica BGeito:</strong>
+            tenta resolver a ficha sem consultar o resumo.
+            No final, usa a correção para perceberes onde ainda tens dúvidas.
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+    BGeito 🌿 — Dá um BGeito à tua nota.
+</footer>
+
+
+</body>
+</html>
