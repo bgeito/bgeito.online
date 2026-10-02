@@ -24,7 +24,6 @@
             color: #17392d;
         }
 
-
         /* MENU */
 
         header {
@@ -43,19 +42,17 @@
             text-decoration: none;
             color: #17392d;
             font-weight: bold;
-            transition: 0.2s;
         }
 
         .voltar:hover {
             color: #b87545;
         }
 
-
         /* INTRODUÇÃO */
 
         .intro {
             text-align: center;
-            padding: 70px 20px 50px;
+            padding: 70px 20px 55px;
         }
 
         .etiqueta {
@@ -79,73 +76,126 @@
             font-size: 18px;
         }
 
+        /* CONTEÚDO */
 
-        /* ANOS */
-
-        .anos {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 30px;
-            flex-wrap: wrap;
-            padding: 20px 8% 90px;
+        .conteudo {
+            max-width: 950px;
+            margin: auto;
+            padding: 10px 25px 90px;
         }
+
+        /* ANO */
 
         .ano {
-            background: white;
-            width: 430px;
-            padding: 35px;
-            border-radius: 25px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            margin-bottom: 65px;
         }
 
-        .ano-numero {
-            font-size: 13px;
-            color: #b87545;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .ano h2 {
-            font-size: 30px;
+        .ano-topo {
             margin-bottom: 25px;
         }
 
+        .ano-numero {
+            color: #b87545;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
 
-        /* TÓPICOS */
+        .ano h2 {
+            font-size: 32px;
+        }
 
-        .topico {
-            padding: 17px 18px;
-            background: #fbf3e9;
-            border-radius: 15px;
+        /* AULA */
+
+        .aula {
+            display: block;
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 20px;
+
+            text-decoration: none;
+            color: #17392d;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+        .aula:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.09);
+        }
+
+        .numero-aula {
+            font-size: 12px;
+            font-weight: bold;
+            color: #b87545;
+            letter-spacing: 1px;
             margin-bottom: 12px;
+        }
 
+        .aula h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .aula p {
+            color: #65746b;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        /* CONTEÚDOS */
+
+        .inclui {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 23px;
+        }
+
+        .item {
+            background: #fbf3e9;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* BOTÃO */
+
+        .entrar {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            cursor: pointer;
+            border-top: 1px solid #eee6dd;
+            padding-top: 20px;
 
-            transition:
-                transform 0.2s,
-                background 0.2s;
-        }
-
-        .topico:hover {
-            background: #f6dfc5;
-            transform: translateX(5px);
-        }
-
-        .topico span:first-child {
             font-weight: bold;
         }
 
         .seta {
+            font-size: 21px;
             color: #b87545;
-            font-size: 20px;
         }
 
+        /* EM BREVE */
+
+        .breve {
+            background: #fbf3e9;
+            border-radius: 22px;
+            padding: 28px;
+            color: #65746b;
+        }
+
+        .breve strong {
+            color: #17392d;
+        }
 
         /* RODAPÉ */
 
@@ -156,10 +206,9 @@
             padding: 30px;
         }
 
-
         /* TELEMÓVEL */
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
 
             header {
                 padding: 20px 6%;
@@ -173,18 +222,12 @@
                 font-size: 42px;
             }
 
-            .intro p {
-                font-size: 16px;
+            .aula {
+                padding: 24px;
             }
 
-            .anos {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-
-            .ano {
-                width: 100%;
-                padding: 25px;
+            .aula h3 {
+                font-size: 22px;
             }
 
         }
@@ -199,7 +242,7 @@
 <header>
 
     <a href="index.html" class="voltar">
-        ← Voltar
+        ← Início
     </a>
 
     <div class="logo">
@@ -207,7 +250,6 @@
     </div>
 
 </header>
-
 
 
 <section class="intro">
@@ -219,117 +261,145 @@
     <h1>Geologia</h1>
 
     <p>
-        Escolhe o teu ano e começa a estudar.
+        Revê as aulas, consulta os resumos e pratica com as fichas.
     </p>
 
 </section>
 
 
-
-<section class="anos">
+<main class="conteudo">
 
 
     <!-- 10.º ANO -->
 
-    <div class="ano">
+    <section class="ano">
 
-        <div class="ano-numero">
-            GEOLOGIA
-        </div>
+        <div class="ano-topo">
 
-        <h2>10.º ano 🌋</h2>
+            <div class="ano-numero">
+                GEOLOGIA
+            </div>
 
+            <h2>10.º ano 🌋</h2>
 
-        <div class="topico">
-            <span>1. Terra e Subsistemas</span>
-            <span class="seta">→</span>
-        </div>
-
-
-        <div class="topico">
-            <span>2. Tempo Geológico</span>
-            <span class="seta">→</span>
         </div>
 
 
-        <div class="topico">
-            <span>3. Mobilismo Geológico</span>
-            <span class="seta">→</span>
-        </div>
+        <!-- AULA 1 -->
+
+        <a href="geo-aula1.html" class="aula">
+
+            <div class="numero-aula">
+                AULA 1
+            </div>
+
+            <h3>
+                🌍 Terra e dinâmica geológica
+            </h3>
+
+            <p>
+                Terra e Subsistemas, Tempo Geológico,
+                Mobilismo Geológico e Estudo do Interior da Terra.
+            </p>
+
+            <div class="inclui">
+
+                <span class="item">
+                    📖 Resumo
+                </span>
+
+                <span class="item">
+                    ✏️ Ficha de exercícios
+                </span>
+
+            </div>
+
+            <div class="entrar">
+
+                <span>Ver aula</span>
+
+                <span class="seta">
+                    →
+                </span>
+
+            </div>
+
+        </a>
 
 
-        <div class="topico">
-            <span>4. Estudo do Interior da Terra</span>
-            <span class="seta">→</span>
-        </div>
+        <!-- AULA 2 -->
 
+        <a href="geo-aula2.html" class="aula">
 
-        <div class="topico">
-            <span>5. Vulcanologia</span>
-            <span class="seta">→</span>
-        </div>
+            <div class="numero-aula">
+                AULA 2
+            </div>
 
+            <h3>
+                🌋 Vulcanologia + Sismologia
+            </h3>
 
-        <div class="topico">
-            <span>6. Sismologia</span>
-            <span class="seta">→</span>
-        </div>
+            <p>
+                Atividade vulcânica, atividade sísmica
+                e fenómenos associados à dinâmica da Terra.
+            </p>
 
-    </div>
+            <div class="inclui">
 
+                <span class="item">
+                    📖 Resumo
+                </span>
+
+                <span class="item">
+                    ✏️ Ficha de exercícios
+                </span>
+
+            </div>
+
+            <div class="entrar">
+
+                <span>Ver aula</span>
+
+                <span class="seta">
+                    →
+                </span>
+
+            </div>
+
+        </a>
+
+    </section>
 
 
     <!-- 11.º ANO -->
 
-    <div class="ano">
+    <section class="ano">
 
-        <div class="ano-numero">
-            GEOLOGIA
+        <div class="ano-topo">
+
+            <div class="ano-numero">
+                GEOLOGIA
+            </div>
+
+            <h2>11.º ano 🪨</h2>
+
         </div>
 
-        <h2>11.º ano 🪨</h2>
+        <div class="breve">
 
+            <strong>Novas aulas em breve.</strong>
 
-        <div class="topico">
-            <span>7. Minerais</span>
-            <span class="seta">→</span>
+            <br><br>
+
+            Os resumos e fichas vão sendo adicionados
+            à medida que avançamos na matéria.
+
         </div>
 
-
-        <div class="topico">
-            <span>8. Rochas Sedimentares</span>
-            <span class="seta">→</span>
-        </div>
+    </section>
 
 
-        <div class="topico">
-            <span>9. Rochas Magmáticas</span>
-            <span class="seta">→</span>
-        </div>
-
-
-        <div class="topico">
-            <span>10. Rochas Metamórficas</span>
-            <span class="seta">→</span>
-        </div>
-
-
-        <div class="topico">
-            <span>11. Ciclo Litológico</span>
-            <span class="seta">→</span>
-        </div>
-
-
-        <div class="topico">
-            <span>12. Exploração Sustentada</span>
-            <span class="seta">→</span>
-        </div>
-
-    </div>
-
-
-</section>
-
+</main>
 
 
 <footer>
