@@ -52,7 +52,7 @@
 
         .intro {
             text-align: center;
-            padding: 70px 20px 55px;
+            padding: 65px 20px 55px;
         }
 
         .etiqueta {
@@ -62,8 +62,9 @@
             padding: 9px 18px;
             border-radius: 30px;
             margin-bottom: 20px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
         .intro h1 {
@@ -74,6 +75,7 @@
         .intro p {
             color: #65746b;
             font-size: 18px;
+            line-height: 1.6;
         }
 
         /* CONTEÚDO */
@@ -84,14 +86,8 @@
             padding: 10px 25px 90px;
         }
 
-        /* ANO */
-
-        .ano {
-            margin-bottom: 65px;
-        }
-
         .ano-topo {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .ano-numero {
@@ -102,95 +98,307 @@
             margin-bottom: 6px;
         }
 
-        .ano h2 {
+        .ano-topo h2 {
             font-size: 32px;
         }
 
-        /* AULA */
+        /* SECÇÕES */
+
+        .secao {
+            margin-bottom: 70px;
+        }
+
+        .secao-cabecalho {
+            margin-bottom: 25px;
+        }
+
+        .secao-cabecalho h2 {
+            font-size: 29px;
+            margin-bottom: 9px;
+        }
+
+        .secao-cabecalho p {
+            color: #65746b;
+            line-height: 1.6;
+        }
+
+        /* ETIQUETAS */
+
+        .gratis {
+            display: inline-block;
+            background: #dfe8d3;
+            color: #17392d;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .exclusivo {
+            display: inline-block;
+            background: #f6dfc5;
+            color: #8b4c25;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        /* RESUMOS */
+
+        .resumos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .resumo {
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+
+            display: flex;
+            flex-direction: column;
+
+            transition: 0.2s;
+        }
+
+        .resumo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.09);
+        }
+
+        .icone {
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #fbf3e9;
+            border-radius: 15px;
+
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .resumo h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .resumo p {
+            color: #65746b;
+            line-height: 1.6;
+            font-size: 15px;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        /* BOTÃO RESUMO */
+
+        .botao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: #17392d;
+            color: white;
+
+            text-decoration: none;
+
+            padding: 14px 17px;
+            border-radius: 12px;
+
+            font-weight: bold;
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+        .botao:hover {
+            background: #b87545;
+        }
+
+        /* AULAS / FICHAS */
 
         .aula {
-            display: block;
             background: white;
             border-radius: 24px;
             padding: 30px;
             margin-bottom: 20px;
 
-            text-decoration: none;
-            color: #17392d;
-
             box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-
-            transition:
-                transform 0.2s,
-                box-shadow 0.2s;
-        }
-
-        .aula:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.09);
         }
 
         .numero-aula {
+            color: #b87545;
             font-size: 12px;
             font-weight: bold;
-            color: #b87545;
             letter-spacing: 1px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .aula h3 {
-            font-size: 25px;
-            margin-bottom: 12px;
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
-        .aula p {
+        .temas {
             color: #65746b;
             line-height: 1.6;
-            margin-bottom: 22px;
+            margin-bottom: 25px;
         }
 
-        /* CONTEÚDOS */
+        /* FICHAS DENTRO DA AULA */
 
-        .inclui {
+        .ficheiros {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .ficheiro {
+            background: #f7f5f1;
+            border-radius: 15px;
+            padding: 18px;
+        }
+
+        .ficheiro-topo {
             display: flex;
+            align-items: center;
             gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 23px;
+            margin-bottom: 8px;
         }
 
-        .item {
-            background: #fbf3e9;
-            padding: 8px 13px;
-            border-radius: 20px;
+        .cadeado {
+            font-size: 18px;
+        }
+
+        .ficheiro h4 {
+            font-size: 16px;
+        }
+
+        .ficheiro p {
+            color: #77736d;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .obter {
+            display: flex;
+            justify-content: space-between;
+
+            text-decoration: none;
+
+            color: #8b4c25;
             font-size: 13px;
             font-weight: bold;
         }
 
-        /* BOTÃO */
+        .obter:hover {
+            color: #17392d;
+        }
 
-        .entrar {
+        /* NOTA ACESSO */
+
+        .nota-acesso {
+            background: #fbf3e9;
+            border-radius: 18px;
+            padding: 20px 22px;
+            margin-top: 22px;
+
+            color: #67594f;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .nota-acesso strong {
+            color: #17392d;
+        }
+
+        /* EXPLICAÇÕES */
+
+        .explicacoes {
+            background: #17392d;
+            color: white;
+
+            border-radius: 28px;
+            padding: 42px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 40px;
 
-            border-top: 1px solid #eee6dd;
-            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .explicacoes-texto {
+            max-width: 570px;
+        }
+
+        .mini {
+            color: #cbd9c5;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .explicacoes h2 {
+            font-size: 30px;
+            margin-bottom: 13px;
+        }
+
+        .explicacoes p {
+            color: #d7dfda;
+            line-height: 1.7;
+        }
+
+        .vantagens {
+            margin-top: 20px;
+            line-height: 1.9;
+        }
+
+        .whatsapp {
+            min-width: 210px;
+
+            background: white;
+            color: #17392d;
+
+            text-decoration: none;
+
+            padding: 16px 20px;
+            border-radius: 14px;
 
             font-weight: bold;
+            text-align: center;
+
+            transition: 0.2s;
         }
 
-        .seta {
-            font-size: 21px;
-            color: #b87545;
+        .whatsapp:hover {
+            background: #dfe8d3;
+            transform: translateY(-2px);
         }
 
-        /* EM BREVE */
+        /* 11.º ANO */
 
         .breve {
             background: #fbf3e9;
             border-radius: 22px;
             padding: 28px;
             color: #65746b;
+            line-height: 1.6;
         }
 
         .breve strong {
@@ -208,26 +416,33 @@
 
         /* TELEMÓVEL */
 
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
 
             header {
                 padding: 20px 6%;
             }
 
             .intro {
-                padding-top: 50px;
+                padding-top: 45px;
             }
 
             .intro h1 {
                 font-size: 42px;
             }
 
-            .aula {
-                padding: 24px;
+            .resumos,
+            .ficheiros {
+                grid-template-columns: 1fr;
             }
 
-            .aula h3 {
-                font-size: 22px;
+            .explicacoes {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 30px;
+            }
+
+            .whatsapp {
+                width: 100%;
             }
 
         }
@@ -261,7 +476,7 @@
     <h1>Geologia</h1>
 
     <p>
-        Revê as aulas, consulta os resumos e pratica com as fichas.
+        Revê a matéria gratuitamente e pratica com as fichas BGeito.
     </p>
 
 </section>
@@ -272,64 +487,206 @@
 
     <!-- 10.º ANO -->
 
-    <section class="ano">
+    <div class="ano-topo">
 
-        <div class="ano-topo">
+        <div class="ano-numero">
+            GEOLOGIA
+        </div>
 
-            <div class="ano-numero">
-                GEOLOGIA
+        <h2>10.º ano 🌋</h2>
+
+    </div>
+
+
+    <!-- RESUMO GERAL -->
+
+    <section class="secao">
+
+        <div class="secao-cabecalho">
+
+            <div class="gratis">
+                ACESSO GRATUITO
             </div>
 
-            <h2>10.º ano 🌋</h2>
+            <h2>📖 Resumo geral</h2>
+
+            <p>
+                Consulta o resumo completo de Geologia do 10.º ano.
+                Escolhe a versão que preferes.
+            </p>
+
+        </div>
+
+
+        <div class="resumos">
+
+
+            <!-- COM APONTAMENTOS -->
+
+            <div class="resumo">
+
+                <div class="icone">
+                    📝
+                </div>
+
+                <h3>Com apontamentos</h3>
+
+                <p>
+                    Versão completa com apontamentos,
+                    notas e explicações adicionais.
+                </p>
+
+                <a href="#" class="botao">
+
+                    <span>Abrir resumo</span>
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+
+            <!-- SEM APONTAMENTOS -->
+
+            <div class="resumo">
+
+                <div class="icone">
+                    📄
+                </div>
+
+                <h3>Sem apontamentos</h3>
+
+                <p>
+                    Versão limpa para estudares a matéria
+                    ou adicionares os teus próprios apontamentos.
+                </p>
+
+                <a href="#" class="botao">
+
+                    <span>Abrir resumo</span>
+
+                    <span>→</span>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FICHAS -->
+
+    <section class="secao" id="fichas">
+
+        <div class="secao-cabecalho">
+
+            <div class="exclusivo">
+                🔒 CONTEÚDO EXCLUSIVO
+            </div>
+
+            <h2>✏️ Fichas de exercícios</h2>
+
+            <p>
+                Pratica os conteúdos trabalhados em cada aula
+                com fichas organizadas por temas.
+            </p>
 
         </div>
 
 
         <!-- AULA 1 -->
 
-        <a href="geo-aula1.html" class="aula">
+        <div class="aula">
 
             <div class="numero-aula">
                 AULA 1
             </div>
 
             <h3>
-                🌍 Terra + Dinâmica geológica
+                🌍 Terra e dinâmica geológica
             </h3>
 
-            <p>
-                Terra e Subsistemas, Tempo Geológico,
-                Mobilismo Geológico e Estudo do Interior da Terra.
+            <p class="temas">
+                Terra e Subsistemas · Tempo Geológico ·
+                Mobilismo Geológico · Estudo do Interior da Terra
             </p>
 
-            <div class="inclui">
 
-                <span class="item">
-                    📖 Resumo
-                </span>
+            <div class="ficheiros">
 
-                <span class="item">
-                    ✏️ Ficha de exercícios
-                </span>
+
+                <!-- ENUNCIADO -->
+
+                <div class="ficheiro">
+
+                    <div class="ficheiro-topo">
+
+                        <span class="cadeado">
+                            🔒
+                        </span>
+
+                        <h4>Enunciado</h4>
+
+                    </div>
+
+                    <p>
+                        Ficha de exercícios da Aula 1.
+                    </p>
+
+                    <a href="#explicacoes" class="obter">
+
+                        <span>Obter acesso</span>
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- CORREÇÃO -->
+
+                <div class="ficheiro">
+
+                    <div class="ficheiro-topo">
+
+                        <span class="cadeado">
+                            🔒
+                        </span>
+
+                        <h4>Correção</h4>
+
+                    </div>
+
+                    <p>
+                        Correção completa da ficha da Aula 1.
+                    </p>
+
+                    <a href="#explicacoes" class="obter">
+
+                        <span>Obter acesso</span>
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
 
             </div>
 
-            <div class="entrar">
+        </div>
 
-                <span>Ver aula</span>
-
-                <span class="seta">
-                    →
-                </span>
-
-            </div>
-
-        </a>
 
 
         <!-- AULA 2 -->
 
-        <a href="geo-aula2.html" class="aula">
+        <div class="aula">
 
             <div class="numero-aula">
                 AULA 2
@@ -339,41 +696,143 @@
                 🌋 Vulcanologia + Sismologia
             </h3>
 
-            <p>
-                Atividade vulcânica, atividade sísmica
-                e fenómenos associados à dinâmica da Terra.
+            <p class="temas">
+                Vulcanismo · Tipos de erupção · Riscos vulcânicos ·
+                Sismologia · Ondas sísmicas · Risco sísmico
             </p>
 
-            <div class="inclui">
 
-                <span class="item">
-                    📖 Resumo
-                </span>
+            <div class="ficheiros">
 
-                <span class="item">
-                    ✏️ Ficha de exercícios
-                </span>
+
+                <!-- ENUNCIADO -->
+
+                <div class="ficheiro">
+
+                    <div class="ficheiro-topo">
+
+                        <span class="cadeado">
+                            🔒
+                        </span>
+
+                        <h4>Enunciado</h4>
+
+                    </div>
+
+                    <p>
+                        Ficha de exercícios da Aula 2.
+                    </p>
+
+                    <a href="#explicacoes" class="obter">
+
+                        <span>Obter acesso</span>
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+
+                <!-- CORREÇÃO -->
+
+                <div class="ficheiro">
+
+                    <div class="ficheiro-topo">
+
+                        <span class="cadeado">
+                            🔒
+                        </span>
+
+                        <h4>Correção</h4>
+
+                    </div>
+
+                    <p>
+                        Correção completa da ficha da Aula 2.
+                    </p>
+
+                    <a href="#explicacoes" class="obter">
+
+                        <span>Obter acesso</span>
+
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
 
             </div>
 
-            <div class="entrar">
+        </div>
 
-                <span>Ver aula</span>
 
-                <span class="seta">
-                    →
-                </span>
+        <div class="nota-acesso">
 
-            </div>
+            🔒 <strong>Como ter acesso?</strong>
 
-        </a>
+            As fichas e respetivas correções estão incluídas
+            para alunos das explicações BGeito ou podem ser
+            adquiridas separadamente.
+
+        </div>
 
     </section>
 
 
+
+    <!-- EXPLICAÇÕES -->
+
+    <section class="explicacoes" id="explicacoes">
+
+
+        <div class="explicacoes-texto">
+
+            <div class="mini">
+                EXPLICAÇÕES BGEITO
+            </div>
+
+            <h2>
+                Precisas de ajuda com Biologia e Geologia? 🌱
+            </h2>
+
+            <p>
+                Se queres acompanhamento na matéria,
+                entra em contacto para saberes mais sobre
+                as explicações BGeito.
+            </p>
+
+
+            <div class="vantagens">
+
+                ✓ Explicação da matéria<br>
+
+                ✓ Resumos de apoio<br>
+
+                ✓ Fichas de exercícios incluídas<br>
+
+                ✓ Correções incluídas
+
+            </div>
+
+        </div>
+
+
+        <a href="#" class="whatsapp">
+
+            💬 Falar comigo
+
+        </a>
+
+
+    </section>
+
+
+
     <!-- 11.º ANO -->
 
-    <section class="ano">
+    <section class="secao">
 
         <div class="ano-topo">
 
@@ -385,9 +844,10 @@
 
         </div>
 
+
         <div class="breve">
 
-            <strong>Novas aulas em breve.</strong>
+            <strong>Novos materiais em breve.</strong>
 
             <br><br>
 
@@ -403,7 +863,9 @@
 
 
 <footer>
+
     BGeito 🌿 — Dá um BGeito à tua nota.
+
 </footer>
 
 
