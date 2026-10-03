@@ -260,7 +260,7 @@
 
        .ficheiros {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
 }
         
@@ -270,6 +270,9 @@
             border-radius: 15px;
             padding: 18px;
         }
+        .pack {
+    grid-column: 1 / -1;
+}
 
         .ficheiro-topo {
             display: flex;
@@ -634,7 +637,7 @@
 
 
     <!-- PACK -->
-    <div class="ficheiro">
+   <div class="ficheiro pack">
 
         <div class="ficheiro-topo">
             <span class="cadeado">📚</span>
@@ -661,25 +664,12 @@
     <span>→</span>
 </a>
 
-                        <span>Obter acesso</span>
-                        <span>→</span>
-
-                    </a>
+                       
 
                 </div>
 
 
-                <!-- CORREÇÃO -->
-
-                <div class="ficheiro">
-
-                    <div class="ficheiro-topo">
-
-                        <span class="cadeado">🔒</span>
-
-                        <h4>Correção</h4>
-
-                    </div>
+                
 
                     <p>
                         Correção completa da ficha da Aula 1.
@@ -691,11 +681,7 @@
 </a>
 
                 </div>
-                <div class="material-card">
-    <div>
-        <h3>📚 Ficha + Correção</h3>
-        <p>Pack completo com a ficha de exercícios e a respetiva correção.</p>
-    </div>
+                
 
     <a href="https://payhip.com/b/t4803" class="botao" target="_blank">
         <span>Comprar pack — 4,00 €</span>
